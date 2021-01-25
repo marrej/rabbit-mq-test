@@ -21,5 +21,6 @@ export class AppComponent implements OnInit {
 
   public sendMessageToQueue(): void {
     console.log('This should trigger message');
+    this.rabbitHelper.publishMessage();
   }
 }
