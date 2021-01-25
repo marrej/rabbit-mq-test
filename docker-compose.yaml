@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx.Dockerfile
+    image: nginx-custom
+    ports:
+      - "80:80"
+  rabbit:
+    build:
+      context: .
+      dockerfile: rabbit.Dockerfile
+    image: test-rabbit
+    expose:
+      - "5672"
+      - "15672"
