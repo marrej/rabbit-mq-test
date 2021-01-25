@@ -24,7 +24,7 @@ export class RabbitHelperService {
       },
 
       // default stomp port for rabbitMQ, can be set via the rabbitMQ conf
-      brokerURL: "ws://localhost:61613/ws",
+      brokerURL: "ws://localhost:15674/ws",
 
       // This url is used for docker-compose connect whne NGINX is doing the pass
       // brokerURL: "ws://localhost:8090/ws",
