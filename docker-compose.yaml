@@ -8,6 +8,13 @@ services:
     image: nginx-custom
     ports:
       - "80:80"
+  proxy:
+    build:
+      context: .
+      dockerfile: proxy.Dockerfile
+    image: nginx-proxy-custom
+    ports:
+      - "8090:8090"
   rabbit:
     build:
       context: .
@@ -16,3 +23,4 @@ services:
     expose:
       - "5672"
       - "15672"
+      - "61613"

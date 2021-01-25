@@ -9,7 +9,7 @@ export class RabbitHelperService {
   constructor() { }
 
   public init(): void {
-    console.log('Initialized');
+    console.log('Initialized!');
     let rxStomp;
 
     const stompConfig = {
@@ -21,7 +21,10 @@ export class RabbitHelperService {
       },
 
       // default stomp port for rabbitMQ, can be set via the rabbitMQ conf
-      brokerURL: "ws://localhost:61613/ws",
+      // brokerURL: "ws://rabbit:61613/ws",
+
+      // This url is used for docker-compose connect whne NGINX is doing the pass
+      brokerURL: "ws://localhost:8090/ws",
 
       // Keep it off for production, it can be quit verbose
       // Skip this key to disable
