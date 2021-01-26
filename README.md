@@ -9,4 +9,9 @@
 
 NGINX proxy pass can be used for exposing the rabbitMQ to the outside world -> therefore you can connect to it from the outside of the node cluster with the url of the app
 
+# How to debug your RabbitMQ instance?
+- you can install wscat tool to be able to connect to the instance
+- npm install -g wscat
+- then use it to call the service
+- `wscat -c ws://localhost:15674/ws`
 
